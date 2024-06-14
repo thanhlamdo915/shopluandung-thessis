@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "shopluandung",
+    "slug": "shopluandung",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "permissions": {
+      "mediaLibrary": {
+        "read": "For choosing a photo.",
+        "write": "For saving a photo."
+      },
+      "camera": "For taking a photo."},
+    "ios": {
+      "supportsTablet": true,
+    "bundleIdentifier": "com.yourcompany.yourapp",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app requires access to the photo library to choose images.",
+        "NSCameraUsageDescription": "This app requires access to the camera to take photos.",
+        "NSPhotoLibraryAddUsageDescription": "This app requires access to the photo library to save images.",
+        "NSLocationWhenInUseUsageDescription": "This app requires access to location services to function properly.",
+        "NSLocationAlwaysUsageDescription": "This app requires access to location services to function properly.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app requires access to location services to function properly."
+
+
+      }},
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ]
+
+  }
+}

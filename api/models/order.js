@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const orderSchema = new mongoose.Schema({
   user: {
@@ -24,9 +24,21 @@ const orderSchema = new mongoose.Schema({
         type: String,
         required: true,
       },
+      rewardPercentage: {
+        type: Number,
+        required: true,
+      },
     },
   ],
   totalPrice: {
+    type: Number,
+    required: true,
+  },
+  totalRewardPoints: {
+    type: Number,
+    required: true,
+  },
+  usedRewardPoints: {
     type: Number,
     required: true,
   },
@@ -68,4 +80,4 @@ const orderSchema = new mongoose.Schema({
 
 const Order = mongoose.model('Order', orderSchema);
 
-module.exports = Order;
+export default Order;
