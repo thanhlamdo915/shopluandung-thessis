@@ -16,6 +16,7 @@ import productRoute from './Routes/ProductRoutes.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import multer from 'multer';
+import uploadRouter from './Routes/file.js';
 // import {ref, uploadBytes, getDownloadURL} from 'firebase/storage';
 // import {storage} from './firebase';
 
@@ -78,6 +79,7 @@ const sendVerificationEmail = async (email, verificationToken) => {
 app.route('/').get((req, res) => {
   res.json('Hello Lam Thanh');
 });
+app.use('/file',uploadRouter )
 //endpoint to register in the app
 app.post('/register', async (req, res) => {
   try {
